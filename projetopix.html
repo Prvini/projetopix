@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar Chave PIX</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Chave PIX</h1>
+    <p>Clique no botão abaixo para copiar a chave PIX:</p>
+    <button onclick="copiarChave()">Copiar Chave PIX</button>
+    <script>
+        function copiarChave() {
+            const chavePIX = "projetosocial@discipuloschurch.com.br";
+            navigator.clipboard.writeText(chavePIX)
+                .then(() => {
+                    alert("Chave PIX copiada para a área de transferência!");
+                })
+                .catch(err => {
+                    alert("Não foi possível copiar a chave PIX. Por favor, copie manualmente.");
+                });
+        }
+    </script>
+</body>
+</html>
